@@ -1,0 +1,34 @@
+body {
+	background: linear-gradient(#f94f6c, #fb645a, #fb8146);
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+
+main {
+	height: 100vh;
+}
+
+.footer {
+	position: absolute;
+	bottom:0;
+	left: 50%;
+    margin-left: -32%;
+    width: 70%;
+}
+
+.footer {
+	color: white;
+}	
+
+.footer ul li {
+	list-style-type: none;
+	display: inline-block;
+	font-size: 14px;
+	margin: 0 0.5em;
+}
+.footer ul li a {
+	text-decoration: none;
+	color: white;
+}

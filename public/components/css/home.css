@@ -1,0 +1,91 @@
+.home__Ads {
+	margin: 1em auto;
+}
+
+.home__Login {
+	padding: 1em;
+	position: absolute;
+	top: 120px;
+	left: 50%;
+	margin-left: -20%;
+}
+.header h2 {
+	font-family: 'Josefin Sans', sans-serif;
+	text-transform: uppercase;
+	color: #fb645a;
+	text-shadow: 0 2px 0 #fb8146;
+	position: relative;
+}
+
+
+.img {
+	display: block;
+	margin: 0 auto;
+}
+
+.btn-facebook {
+	padding: 0.5em 1.5em;
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	justify-content: space-between;
+	width: 58%;
+	margin: 0 auto;
+}
+.btn-facebook i {
+	font-size: 25px;
+	display: block;
+}
+
+.btn-facebook:hover {
+	background: #fb645a;
+	border-color: #fb645a;
+}
+.btn-facebook:focus, .btn-facebook:active {
+	outline: none;
+	box-shadow: none;
+	color: white;
+} 
+
+
+.progressCirculardemoBasicUsage body {
+  padding: 20px; }
+
+.progressCirculardemoBasicUsage h4 {
+  margin: 10px 0; }
+
+.progressCirculardemoBasicUsage md-progress-circular {
+  margin-bottom: 20px; }
+
+.progressCirculardemoBasicUsage #loaders > md-switch {
+  margin: 0;
+  margin-left: 10px;
+  margin-top: -10px; }
+
+.progressCirculardemoBasicUsage #loaders > h5 {
+  margin-top: 0; }
+
+.progressCirculardemoBasicUsage #loaders > p {
+  margin-right: 20px;
+  margin-bottom: 24px; }
+
+.progressCirculardemoBasicUsage p.small {
+  font-size: 0.8em;
+  margin-top: -18px; }
+
+.progressCirculardemoBasicUsage hr {
+  width: 100%;
+  margin-top: 20px;
+  border-color: rgba(221, 221, 177, 0.1); }
+
+.progressCirculardemoBasicUsage p.small > code {
+  font-size: 0.8em; }
+
+.progressCirculardemoBasicUsage .visible {
+  border-color: rgba(221, 221, 177, 0); }
+
+ .loadingHome {
+ 	position: absolute;
+ 	left: 50%;
+ 	margin-left: -4%;
+ 	top: 270px;
+ }

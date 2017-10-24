@@ -1,0 +1,103 @@
+
+<md-card class="tbg" ng-controller="dashboardCtrl">
+    <div class="theader">
+      
+      <div class="tlogo" ng-href="">
+        <a href="/#!/dashboard">
+          <img src="img/logo-header.png" alt="Tindeando" title="Tindeando" />
+        </a>
+      </div>
+
+      <div class="theader__Profile">
+        <img src="{{image}}" alt="Edinson" width="50px">
+      </div>
+      
+      <!--<md-button class="theader__Comments" ng-href="#!/dashboard/messages">
+          <md-tooltip>
+              Mensajes
+          </md-tooltip>
+          <i class="fa fa-comments" aria-hidden="true"></i>
+      </md-button>-->
+
+      <!--<md-button class="theader__Comments">
+          <md-tooltip>
+              Filtrar
+          </md-tooltip>
+          <i class="fa fa-filter" aria-hidden="true"></i>
+      </md-button>-->
+
+
+    </div>
+
+    <div class="tbgwrap" ng-show="continueUser" ng-controller="usersDefaultCtrl">
+     
+     <div class="tphoto">
+        <div class="tphoto__BG" style="background-image:url('{{photouser}}');" ng-id="{{iduser}}"></div>
+        <div class="tname"  ng-cloak>
+            {{nameuser}},
+            <span class="age" ng-cloack>{{edad}}</span>
+        </div>
+        <div class="tinfo">
+            <i class="flag" aria-hidden="true">
+              <img class="flag-img" src="img/flag/{{pais[0]}}">
+              <md-tooltip>
+                {{pais[1]}}
+              </md-tooltip>
+            </i>
+            <i class="fa fa-users" aria-hidden="true" ng-cloack> {{likeuser.length}}</i>
+        </div>
+      </div>
+
+      <div class="tcontrols">
+        <md-button class="tno" ng-click="close();">
+            <i class="fa fa-times" aria-hidden="true"></i>
+
+        </md-button>
+        <md-button class="ti">
+          <i class="fa fa-info" aria-hidden="true" ng-click="showAlert($event)"></i>
+        </md-button>
+        <md-button class="tyes" ng-click="like();">
+          <i class="fa fa-heart" aria-hidden="true"></i>
+        </md-button>
+      </div>
+
+    </div>
+
+    <div class="tbgwrap" ng-show="!continueUser">
+      <section class="form__Container">
+        <form action="" class="form" ng-submit="continueInfo($event)">
+            
+            <md-input-container class="input-md-change">
+              <label>Pais</label>
+              <md-select required ng-model="pais">
+                <md-option value="Argentina">Argentina</md-option>
+                <md-option value="Bolivia">Bolivia</md-option>
+                <md-option value="Colombia">Colombia</md-option>
+                <md-option value="Chile">Chile</md-option>
+                <md-option value="Paraguay">Paraguay</md-option>
+                <md-option value="Peru">Peru</md-option>
+                <md-option value="Uruguay">Uruguay</md-option>
+              </md-select>
+          </md-input-container>
+
+          <md-input-container class="input-md-change">
+            <label>Sexo</label>
+            <md-select required ng-model="sexo">
+                <md-option value="Hombre">Hombre</md-option>
+                <md-option value="Mujer">Mujer</md-option>
+                <md-option value="Otro">Otro</md-option>
+              </md-select>
+          </md-input-container>
+
+
+          <md-input-container class="input-md-change">
+            <label>Edad</label>
+            <input type="text" ng-model="edad" placeholder="23" required>
+          </md-input-container>
+
+          <md-button type="submit">Finalizar</md-button>
+        </form>
+      </section>
+    </div>
+
+</md-card>

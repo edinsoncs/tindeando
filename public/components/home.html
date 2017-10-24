@@ -1,0 +1,26 @@
+<div class="container" ng-controller="homeCtrl" ng-cloak>
+	<div class="row">
+		
+		<!--<div class="card home__Ads text-center">
+			<img src="http://static.shareasale.com/image/31562/ECP-Banner-Ad-720x90_25.jpg" alt="">
+		</div>-->
+
+		<article class="card col-md-5 text-center home__Login" ng-show="continue">
+			
+			<figure class="figure">
+				<img src="img/logo.png" alt="Vota a tus amigos" width="220px" class="img">
+			</figure>
+			<div class="continue">
+				<md-button ng-href="/auth/facebook" class="md-raised md-warn btn-facebook">
+					<i class="fa fa-facebook"></i>
+					Continuar con Facebook
+				</md-button>
+			</div>			
+		</article>
+
+		<div class="loadingHome" ng-show="loading">
+			<md-progress-circular md-mode="indeterminate" class="md-warn md-hue-3" md-diameter="100"></md-progress-circular>
+		</div>
+
+	</div>
+</div>

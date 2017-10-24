@@ -1,0 +1,71 @@
+
+<md-card class="tbg" ng-controller="messagesCtrl">
+    <div class="theader">
+      
+      <div class="theader__Profile">
+        <img src="https://scontent.xx.fbcdn.net/v/t1.0-1/s200x200/19657202_1562722207113576_2560526467125535001_n.jpg?oh=4c3c5f0f0a705650c5480bb3548225d5&oe=5A64FAD7" alt="Edinson" width="50px">
+      </div>
+      
+      <div class="tlogo">
+        <a href="#!/dashboard/">
+          <img src="https://worldvectorlogo.com/logos/tinder-1.svg" alt="Tinder Logo" title="Tinder Logo" />
+        </a>
+      </div>
+
+      
+      <md-button class="theader__Comments" ng-href="#!/dashboard/messages">
+          <md-tooltip>
+              Mensajes
+          </md-tooltip>
+          <i class="fa fa-comments" aria-hidden="true"></i>
+      </md-button>
+
+
+    </div>
+
+     <div flex-gt-sm="100" flex>
+
+          <md-toolbar layout="row" class="md-hue-3 bg-primary-tindeando">
+            <div class="full-width md-toolbar-tools justfy-content">
+              <img ng-src="https://pbs.twimg.com/media/Bwd5VuKIIAA_-31.jpg" class="md-avatar" alt="usuario" />
+               <div class="md-list-item-text"  layout="column">
+                    <h3>Carla Tamara</h3>
+                </div>
+            </div>
+          </md-toolbar>
+
+          <md-content class="paddingInterno">
+              
+             <div class="messageUser">
+                 <div class="contenedor-txt">
+                    <p>Hola como estas mi nombre es Carla, todo bien edinson? </p>
+                  </div>
+
+                  <img ng-src="https://pbs.twimg.com/media/Bwd5VuKIIAA_-31.jpg" class="md-avatar" alt="usuario" />
+             </div>
+
+              <md-divider ></md-divider>
+
+              <div class="messageUser">
+                 <img ng-src="https://scontent.xx.fbcdn.net/v/t1.0-1/s200x200/19657202_1562722207113576_2560526467125535001_n.jpg?oh=4c3c5f0f0a705650c5480bb3548225d5&oe=5A64FAD7" class="md-avatar" alt="usuario" />
+                 <div class="contenedor-txt">
+                    <p>hahah bien bien, es increible tindeando </p>
+                  </div>
+             </div>
+      
+          </md-content>
+
+          <div class="contentForm">
+            <form action="">
+              <input type="text" placeholder="Escribelo ah Carla">
+              <div class="text-center">
+                <md-button type="submit">
+                  Enviar
+                </md-button>
+              </div>
+            </form>
+          </div>
+
+    </div>
+
+</md-card>
