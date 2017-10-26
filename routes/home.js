@@ -19,6 +19,13 @@ router.get('/', (req, res, next) => {
 
 });
 
+router.post('/', (req, res, next)=> {
+
+	res.write('<h1>Juego</h1>');
+	res.end();
+
+});
+
 router.get('/profile', (req, res, next) => {
 
 	console.log(req.user);
