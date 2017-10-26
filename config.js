@@ -22,7 +22,7 @@ module.exports = (passport) => {
 	passport.use(new fb({
 		clientID : "1502441733164907",
         clientSecret: "3225bf427abbb71de59be5ff174dce75",
-        callbackURL : 'http://localhost:3535/auth/facebook/callback',
+        callbackURL : 'http://tindeando.com/auth/facebook/callback',
         profileFields : ['id', 'displayName',/*'provider',*/, 'picture.type(large)', 'email']
 	}, function(accessToken, refreshToken, profile, done){
 
