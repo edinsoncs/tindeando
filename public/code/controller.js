@@ -156,7 +156,7 @@ app.controller('usersDefaultCtrl', function($scope, $http, Datausers, Hombres, M
 		})
 		
 	} else {
-		var usersArray = Datausers.$$state.value[0];
+		var usersArray = Datausers.$$state.value.length ? Datausers.$$state.value[0] : '';
 		showUser(usersArray);
 	}
 
