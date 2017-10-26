@@ -71,6 +71,8 @@ app.controller('dashboardCtrl', ['$scope', '$http', 'Datausers', '$mdDialog', '$
 
 		let random = Datausers[Math.floor(Math.random()*Datausers.length)];
 
+		console.log(random);
+
 		if(localStorage.getItem('my_id') == random._id) {
 		   
 
