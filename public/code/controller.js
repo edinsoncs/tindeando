@@ -155,8 +155,8 @@ app.controller('usersDefaultCtrl', function($scope, $http, Datausers, Hombres, M
 			showUser(usersArray);
 		})
 		
-	} else {
-		var usersArray = Datausers.$$state.value.length ? Datausers.$$state.value[0] : '';
+	} else if(sexo = 'Otro'){
+		var usersArray = Datausers.$$state.value[0];
 		showUser(usersArray);
 	}
 
