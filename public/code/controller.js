@@ -69,9 +69,14 @@ app.controller('dashboardCtrl', ['$scope', '$http', 'Datausers', '$mdDialog', '$
 
 	$scope.close = function(){
 
-		let random = Datausers[Math.floor(Math.random()*Datausers.length)];
+		var usersArray;
 
-		console.log(random);
+		Datausers.then(function(user){
+			var usersArray = user[0];	
+		});
+
+		let random = usersArray[Math.floor(Math.random()*usersArray.length)];
+
 
 		if(localStorage.getItem('my_id') == random._id) {
 		   
@@ -195,7 +200,7 @@ app.controller('usersDefaultCtrl', function($scope, $http, Datausers, Hombres, M
 		function showUserContinue(usersArray) {
 			
 			let random = usersArray[Math.floor(Math.random()*usersArray.length)];
-			console.log(random)
+			
 			if(localStorage.getItem('my_id') == random._id) {
 		   
 			} else{
