@@ -72,8 +72,11 @@ app.controller('dashboardCtrl', ['$scope', '$http', 'Datausers', '$mdDialog', '$
 		var usersArray;
 
 		Datausers.then(function(user){
-			usersArray = user[0];	
+			usersArray = user[0];
+			console.log(usersArray);	
 		});
+
+		console.log(usersArray);
 
 		let random = usersArray[Math.floor(Math.random()*usersArray.length)];
 
