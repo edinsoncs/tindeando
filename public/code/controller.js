@@ -228,6 +228,26 @@ app.controller('usersDefaultCtrl', function($scope, $http, Datausers, Hombres, M
 			showUserContinue(usersArray);
 		}
 
+		function showUserContinue(usersArray) {
+			
+			let random = usersArray[Math.floor(Math.random()*usersArray.length)];
+			console.log(random)
+			if(localStorage.getItem('my_id') == random._id) {
+		   
+			} else{
+				
+				$scope.iduser = random._id;
+				$scope.photouser = random.photo;
+				$scope.nameuser = random.name.split(' ')[0] + ' ' +random.name.split(' ')[1][0];
+				$scope.likeuser = random.likes;
+				$scope.edad = random.info.edad;
+				$scope.pais = getImagePais(random.info.pais);
+
+
+			}
+
+		}
+
 	}
 
 
