@@ -156,6 +156,12 @@ app.controller('usersDefaultCtrl', function($scope, $http, Datausers, Hombres, M
 		})
 		
 	} else {
+
+		Datausers.then(function(user){
+			var usersArray = user[0];
+			showUser(usersArray);
+		})
+
 		//var usersArray = Datausers.$$state.value[0];
 		//showUser(usersArray);
 	}
