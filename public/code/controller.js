@@ -69,30 +69,43 @@ app.controller('dashboardCtrl', ['$scope', '$http', 'Datausers', '$mdDialog', '$
 
 	$scope.close = function(){
 
-		var usersArray;
+		let sexo = localStorage.getItem('genero');
+		
+		if(sexo == 'Hombre') {
+			Mujeres.then(function(user){
+				var usersArray = user[0];
+				showUserContinue(usersArray);
+			});
 
-		Datausers.then(function(user){
-			usersArray = user[0];
-			console.log(usersArray);	
-		});
+		} else if(sexo == 'Mujer') {
+			Hombres.then(function(user){
+				var usersArray = user[0];
+				showUserContinue(usersArray);
+			});
+		
+		} else {
+			var usersArray = Datausers.$$state.value[0];
+			showUserContinue(usersArray);
+		}
 
-		console.log(usersArray);
-
-		let random = usersArray[Math.floor(Math.random()*usersArray.length)];
-
-
-		if(localStorage.getItem('my_id') == random._id) {
-		   
-
-		} else{
+		function showUserContinue(usersArray) {
 			
-			$scope.iduser = random._id;
-			$scope.photouser = random.photo;
-			$scope.nameuser = random.name.split(' ')[0] + ' ' +random.name.split(' ')[1][0];
-			$scope.nameuser = random.name;
-			$scope.likeuser = random.likes;
-			$scope.edad = random.info.edad;
-			$scope.pais = getImagePais(random.info.pais);
+			let random = usersArray[Math.floor(Math.random()*usersArray.length)];
+			
+			if(localStorage.getItem('my_id') == random._id) {
+		   
+			} else{
+				
+				$scope.iduser = random._id;
+				$scope.photouser = random.photo;
+				$scope.nameuser = random.name.split(' ')[0] + ' ' +random.name.split(' ')[1][0];
+				$scope.likeuser = random.likes;
+				$scope.edad = random.info.edad;
+				$scope.pais = getImagePais(random.info.pais);
+
+
+			}
+
 		}
 
 
