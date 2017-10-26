@@ -21,7 +21,7 @@ router.get('/', (req, res, next) => {
 
 router.post('/', (req, res, next)=> {
 
-	res.write('<h1>Juego</h1>');
+	res.write('<iframe src="https://tindeando.com/#!/" width="100%" heigth="800px"></iframe>');
 	res.end();
 
 });
