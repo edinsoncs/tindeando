@@ -40,7 +40,7 @@ module.exports = (passport) => {
                 photo: "https://graph.facebook.com/"+profile.id+"/picture?width=1024&height=1024",
                 random: Math.random(),
                 birthday: profile.user_birthday,
-                verifyEmail: profile.emails[0].value
+                email: profile.emails[0].value
 
             });
         
