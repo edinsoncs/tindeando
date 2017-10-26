@@ -18,13 +18,13 @@ router.get('/', (req, res, next) => {
 	res.render('index.html');
 
 });
-
+/*
 router.post('/', (req, res, next)=> {
 
-	res.write('<iframe src="https://tindeando.com/#!/" width="100%" heigth="800px"></iframe>');
+	res.write('<iframe src="https://tindeando.com/#!/" width="100%" height="800px"></iframe>');
 	res.end();
 
-});
+}); */
 
 router.get('/profile', (req, res, next) => {
 
