@@ -67,49 +67,7 @@ app.controller('dashboardCtrl', ['$scope', '$http', 'Datausers', '$mdDialog', '$
 
 
 
-	$scope.close = function(){
-
-		let sexo = localStorage.getItem('genero');
-		
-		if(sexo == 'Hombre') {
-			Mujeres.then(function(user){
-				var usersArray = user[0];
-				showUserContinue(usersArray);
-			});
-
-		} else if(sexo == 'Mujer') {
-			Hombres.then(function(user){
-				var usersArray = user[0];
-				showUserContinue(usersArray);
-			});
-		
-		} else {
-			var usersArray = Datausers.$$state.value[0];
-			showUserContinue(usersArray);
-		}
-
-		function showUserContinue(usersArray) {
-			
-			let random = usersArray[Math.floor(Math.random()*usersArray.length)];
-			
-			if(localStorage.getItem('my_id') == random._id) {
-		   
-			} else{
-				
-				$scope.iduser = random._id;
-				$scope.photouser = random.photo;
-				$scope.nameuser = random.name.split(' ')[0] + ' ' +random.name.split(' ')[1][0];
-				$scope.likeuser = random.likes;
-				$scope.edad = random.info.edad;
-				$scope.pais = getImagePais(random.info.pais);
-
-
-			}
-
-		}
-
-
-	}
+	
 
 
 	 $scope.showAlert = function(ev) {
@@ -179,14 +137,12 @@ app.controller('usersDefaultCtrl', function($scope, $http, Datausers, Hombres, M
 		})
 		
 	} else {
-
 		Datausers.then(function(user){
 			var usersArray = user[0];
 			showUser(usersArray);
-		})
 
-		//var usersArray = Datausers.$$state.value[0];
-		//showUser(usersArray);
+		});
+
 	}
 
 
@@ -216,7 +172,7 @@ app.controller('usersDefaultCtrl', function($scope, $http, Datausers, Hombres, M
 		function showUserContinue(usersArray) {
 			
 			let random = usersArray[Math.floor(Math.random()*usersArray.length)];
-			
+			console.log(random)
 			if(localStorage.getItem('my_id') == random._id) {
 		   
 			} else{
@@ -248,6 +204,30 @@ app.controller('usersDefaultCtrl', function($scope, $http, Datausers, Hombres, M
 		}
 
 		
+	}
+
+	$scope.close = function(){
+
+		let sexo = localStorage.getItem('genero');
+		
+		if(sexo == 'Hombre') {
+			Mujeres.then(function(user){
+				var usersArray = user[0];
+				showUserContinue(usersArray);
+			});
+			console.log('quiero mujercitas virgenes');
+
+		} else if(sexo == 'Mujer') {
+			Hombres.then(function(user){
+				var usersArray = user[0];
+				showUserContinue(usersArray);
+			});
+		
+		} else {
+			var usersArray = Datausers.$$state.value[0];
+			showUserContinue(usersArray);
+		}
+
 	}
 
 
