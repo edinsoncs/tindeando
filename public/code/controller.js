@@ -54,12 +54,13 @@ app.controller('dashboardCtrl', ['$scope', '$http', 'Datausers', '$mdDialog', '$
 
 		if(data.data.info) {
 			$scope.continueUser = true;
+			localStorage.setItem('my_id', data.data._id);
+			localStorage.setItem('genero', data.data.info.sexo);
 		} else {
 			$scope.continueUser = false;
 		}
 
-		localStorage.setItem('my_id', data.data._id);
-		localStorage.setItem('genero', data.data.info.sexo);
+		
 
 	});
 
