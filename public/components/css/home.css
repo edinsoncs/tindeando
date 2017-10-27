@@ -1,3 +1,66 @@
+.header {
+	background: white;
+	line-height: 50px;
+	padding-bottom: 0.3em;
+}
+.header figure {
+	margin-bottom: 0;
+	padding-top: 0.2em;
+}
+.header figure img {
+	display: block;
+}
+.header ul {
+	margin-bottom: 0;
+}
+.header ul li {
+	display: inline-block;
+}
+.header ul li .btn {
+	width: 126px;
+}
+.header ul li a {
+	text-decoration: none;
+	color: white;
+}
+
+.main .primary {
+	padding-top: 4em;
+	padding-bottom: 4em;
+}
+.main .secondary h4 {
+	padding: .5em 0;
+	margin: 0;
+}
+.main .secondary  img {
+	display: block;
+	border-radius: 50%;
+	margin: 0 auto;
+	border: 5px solid white;
+}
+.main .secondary .usernew {
+	margin: 0 auto;
+}
+
+.main .secondary .card {
+	margin: 0 auto;
+	float: none;
+}
+.main .primary h2 {
+	font-size: 3.5em;
+	color: white;
+	font-weight: 700;
+}
+.main .primary .description{
+	margin: 0 auto;
+	float: none;
+	color: white;
+}
+
+.main .secondary {
+	position: relative;
+}
+
 .home__Ads {
 	margin: 1em auto;
 }

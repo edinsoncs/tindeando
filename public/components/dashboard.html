@@ -65,11 +65,12 @@
 
     <div class="tbgwrap" ng-show="!continueUser">
       <section class="form__Container">
-        <form action="" class="form" ng-submit="continueInfo($event)">
+        <form class="form" ng-submit="continueInfo($event)">
             
             <md-input-container class="input-md-change">
               <label>Pais</label>
-              <md-select required ng-model="pais">
+              <md-select required ng-model="pais" >
+                <md-option value="" selected disabled>Selecciona tu pais</md-option>
                 <md-option value="Argentina">Argentina</md-option>
                 <md-option value="Bolivia">Bolivia</md-option>
                 <md-option value="Colombia">Colombia</md-option>
@@ -92,7 +93,7 @@
 
           <md-input-container class="input-md-change">
             <label>Edad</label>
-            <input type="text" ng-model="edad" placeholder="23" required>
+            <input type="text" ng-model="edad" placeholder="23" required >
           </md-input-container>
 
           <md-button type="submit">Finalizar</md-button>

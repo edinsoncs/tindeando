@@ -1,9 +1,58 @@
-<div class="container" ng-controller="homeCtrl" ng-cloak>
+<header class="header container-fluid">
+	<div class="container">
+		<nav class="menu">
+			<div class="row">
+			
+				<figure class="menu__Logo col-md-3 text-left">
+					<img src="img/logo-header.png" alt="Vota a tus amigos" width="220px" class="img">
+				</figure>
+				<ul class="ul col-md-9 text-right">
+					<li class="list col-md-2">
+						 <md-button class="md-raised md-warn btn">
+								Registrar
+						 </md-button>
+						
+					</li>
+
+					<li class="list col-md-2">
+						<md-button class="md-raised md-primary btn" ng-href="/auth/facebook">
+								Ingresar
+						</md-button>
+						
+					</li>
+
+					
+				</ul>
+			
+			</div>
+		</nav>
+	</div>
+</header>
+
+<main class="container main">
 	<div class="row">
-		
-		<!--<div class="card home__Ads text-center">
-			<img src="http://static.shareasale.com/image/31562/ECP-Banner-Ad-720x90_25.jpg" alt="">
-		</div>-->
+		<section class="col-md-12 text-center primary">
+			<h2>Conecta con {{usersCantidad.length + 1}} usuarios solteros</h2>
+			<p class="description col-md-6">
+				Si lo que buscas es una relación sincera,
+				estás en el lugar correcto: más de 90% 
+				de nuestros usuarios solteros 
+				buscan una relación duradera
+			</p>
+		</section>
+	</div>
+	<div class="row">
+		<section class="col-md-12 secondary text-center">
+			<div class="col-md-4 usernew">
+				<img src="{{users.photo}}" alt="{{users.name}}" width="250px">
+			</<div>
+		</section>
+	</div>
+</main>
+
+
+<!--<div class="container" ng-controller="homeCtrl" ng-cloak>
+	<div class="row">
 
 		<article class="card col-md-5 text-center home__Login" ng-show="continue">
 			
@@ -23,4 +72,4 @@
 		</div>
 
 	</div>
-</div>
+</div>-->

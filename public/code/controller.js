@@ -6,7 +6,7 @@
 
 
 
-app.controller('homeCtrl', ['$scope', '$interval', function($scope, $interval){
+app.controller('homeCtrl', ['$scope', '$interval', 'Datausers', function($scope, $interval, Datausers){
 
 
 	var self = this;
@@ -35,6 +35,14 @@ app.controller('homeCtrl', ['$scope', '$interval', function($scope, $interval){
         }
 
       }, 100);
+
+    Datausers.then(function(user){
+		var usersArray = user[0];
+		let random = usersArray[Math.floor(Math.random()*usersArray.length)];
+		$scope.users = random;
+		$scope.usersCantidad = user;
+
+	});
 
 	
 }]);
