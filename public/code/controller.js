@@ -40,8 +40,7 @@ app.controller('homeCtrl', ['$scope', '$interval', 'Datausers', function($scope,
 		var usersArray = user[0];
 		let random = usersArray[Math.floor(Math.random()*usersArray.length)];
 		$scope.users = random;
-		$scope.usersCantidad = user;
-
+		$scope.usersCantidad = user[0];
 	});
 
 	
