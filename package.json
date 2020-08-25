@@ -16,7 +16,7 @@
     "express-session": "^1.15.6",
     "hotnode": "0.0.8",
     "mongodb": "^2.2.33",
-    "mongoose": "^4.12.3",
+    "mongoose": "^5.7.5",
     "monk": "^6.0.5",
     "mysql": "^2.15.0",
     "passport": "^0.4.0",
